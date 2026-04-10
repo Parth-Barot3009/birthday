@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Message 💌</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="center fade">
+
+<div class="message-box">
+    <p id="text"></p>
+</div>
+
+<button class="btn" onclick="goNext() ">Final Surprise 💖</button>
+
+<script>
+const message = "Sometimes people come into life and make everything feel better... and you are one of them 💖";
+
+let i = 0;
+
+function typeEffect(){
+    if(i < message.length){
+        document.getElementById("text").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeEffect,40);
+    }
+}
+
+typeEffect();
+
+function goNext(){
+    // 🔥 Save user interaction
+    localStorage.setItem("playMusic", "true");
+
+    // go to next page
+    window.location.href="wish.html";
+}
+</script>
+
+</body>
+</html>
